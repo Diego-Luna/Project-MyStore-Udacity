@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-home-big-product-section',
@@ -6,6 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-big-product-section.component.css']
 })
 export class HomeBigProductSectionComponent implements OnInit {
+
+  @Input() imgUrl: string = "";
+  @Input() sectionName: string = "";
+  @Input() titleName: string = "";
+
+  @Input() colorTitle: string = "";
+  @Input() colorSection: string = "";
+  @Input() colorbackground: string = "";
+
 
   constructor() { }
 

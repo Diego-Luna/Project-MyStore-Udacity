@@ -1,0 +1,39 @@
+section {
+  width: 43vw;
+  height: 300px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 36px;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 30%;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 20%;
+  text-transform: uppercase;
+}
+
+figure {
+  width: 60%;
+  height: 100%;
+  background-position: center center;
+  background-size: 120px 80px;
+  background-repeat: no-repeat;
+  border-radius: 40px 40px 0 0;
+}
+
+div {
+  width: 30%;
+  height: 100%;
+  padding-left: 10%;
+}

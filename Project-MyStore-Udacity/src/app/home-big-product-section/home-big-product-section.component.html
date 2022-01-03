@@ -1,1 +1,7 @@
-<p>home-big-product-section works!</p>
+<section [ngStyle]="{'background-color': colorbackground}">
+  <div>
+    <h2 [ngStyle]="{'color': colorSection}"> {{sectionName}} </h2>
+    <h3 [ngStyle]="{'color': colorTitle}"> {{titleName}} </h3>
+  </div>
+  <figure [ngStyle]="{'background-image': 'url('+ imgUrl+')'}"></figure>
+</section>
