@@ -7,6 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MainHomeComponent } from './main-home/main-home.component';
 import { HomeSmallProductSectionComponent } from './home-small-product-section/home-small-product-section.component';
 import { HomeBigProductSectionComponent } from './home-big-product-section/home-big-product-section.component';
+import { HomeSafeSectionComponent } from './home-safe-section/home-safe-section.component';
+import { ProductsItemComponent } from './products-item/products-item.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { HomeBigProductSectionComponent } from './home-big-product-section/home-
     NavbarComponent,
     MainHomeComponent,
     HomeSmallProductSectionComponent,
-    HomeBigProductSectionComponent
+    HomeBigProductSectionComponent,
+    HomeSafeSectionComponent,
+    ProductsItemComponent
   ],
   imports: [
     BrowserModule,

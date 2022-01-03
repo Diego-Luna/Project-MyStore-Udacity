@@ -1,0 +1,23 @@
+section {
+  display: flex;
+  height: 57px;
+}
+
+figure {
+  height: 50px;
+  width: 50px;
+}
+
+div {
+  margin-left: 20px;
+}
+
+p {
+  font-size: 20;
+  font-weight: 400;
+}
+
+b {
+  font-size: 25;
+  font-weight: 800;
+}
