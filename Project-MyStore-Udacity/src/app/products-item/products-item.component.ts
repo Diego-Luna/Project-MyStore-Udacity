@@ -10,6 +10,7 @@ export class ProductsItemComponent implements OnInit {
   @Input() imgUrl: string = "";
   @Input() prodcutName: string = "";
   @Input() productPrice: number = 0;
+  @Input() productId: number = -1;
 
   constructor() { }
 

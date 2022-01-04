@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsServiceService } from '../products-service.service';
 
-// interface Product {
-//   id: number,
-//   name: string,
-//   price: number,
-//   imgUrl: string,
-//   productQuantity: number
-// }
+interface Product {
+  id: number,
+  name: string,
+  price: number,
+  imgUrl: string,
+  productQuantity: number
+}
 
 @Component({
   selector: 'app-home',
@@ -16,7 +16,7 @@ import { ProductsServiceService } from '../products-service.service';
 })
 export class HomeComponent implements OnInit {
 
-  produdctsList: any = []
+  produdctsList: any | Product[] = []
 
   constructor(private productsService: ProductsServiceService) {
   }
@@ -27,9 +27,9 @@ export class HomeComponent implements OnInit {
 
     if (this.produdctsList.length < 2) {
       this.productsService.getData().subscribe(data => {
-        this.produdctsList = data
-        this.produdctsList = this.produdctsList.products
-        this.productsService.receiveProducts(this.produdctsList);
+        var newData: any = data;
+        this.productsService.receiveProducts(newData.products);
+        this.produdctsList = this.productsService.getProducts()
       });
     }
   }
