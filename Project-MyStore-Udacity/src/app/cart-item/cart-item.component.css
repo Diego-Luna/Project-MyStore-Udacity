@@ -34,6 +34,11 @@ button {
   font-weight: 400;
   font-size: 110%;
 }
+
+button {
+  cursor: pointer;
+}
+
 .product-info-titile {
   font-size: 150%;
   text-transform: capitalize;
@@ -47,13 +52,51 @@ button {
 .product-amount-container {
   display: flex;
   height: auto;
-  width: 30%;
-  min-width: 120px;
-}
-.product-amount-container p, button  {
-  height: 15%;
   width: 15%;
+  min-width: 200px;
+  justify-content: center;
+}
+.product-amount-container p,
+button {
+  height: 40px;
+  width: 40px;
   background-color: transparent;
-  border: none;
   text-align: center;
+}
+.product-amount-container button {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+p,
+button {
+  border: none;
+}
+
+.product-amount-count {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 15%;
+}
+
+.product-price {
+  font-size: 30px;
+  font-weight: 400;
+  width: 12%;
+  text-align: center;
+}
+
+.icon-remove-container {
+  width: 50px;
+  height: 50px;
+}
+
+.delete-button {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
 }
