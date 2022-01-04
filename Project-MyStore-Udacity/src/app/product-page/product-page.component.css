@@ -1,0 +1,88 @@
+section {
+  height: 80vh;
+  width: 95vw;
+  margin: auto;
+  display: flex;
+}
+
+figure {
+  width: 55%;
+  height: 100%;
+}
+
+.container-info {
+  width: 45%;
+  height: 100%;
+  padding-top: 5%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 60px;
+  font-weight: 800;
+  text-transform: capitalize;
+  padding-top: 5%;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+b {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.cart-secction {
+  display: flex;
+  width: 100%;
+  height: 15%;
+}
+
+.cart-secction-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  width: 20%;
+  height: 60%;
+  border-radius: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 100%;
+  font-weight: 400;
+  margin-left: 20%;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+select {
+  width: 20%;
+  height: 60%;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding-left: 20px;
+  font-size: 1.2em;
+}
