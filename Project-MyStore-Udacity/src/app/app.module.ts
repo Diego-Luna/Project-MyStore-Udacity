@@ -10,6 +10,7 @@ import { HomeBigProductSectionComponent } from './home-big-product-section/home-
 import { HomeSafeSectionComponent } from './home-safe-section/home-safe-section.component';
 import { ProductsItemComponent } from './products-item/products-item.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeBigProductSectionComponent,
     HomeSafeSectionComponent,
     ProductsItemComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
