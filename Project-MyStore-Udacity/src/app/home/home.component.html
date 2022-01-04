@@ -43,14 +43,14 @@
   </app-home-safe-section>
 </section>
 
-<h2 class="products-title">Best seller products</h2>
+<h2 id="shop" class="products-title">Best seller products</h2>
 <h3 class="products-sub-title">Speaker These are many variations passages</h3>
 
 <div class="container-section-products">
   <div class="container-section-products" *ngIf="produdctsList">
 
-    <app-products-item *ngFor="let produdct of produdctsList" [imgUrl]='produdct.imgUrl' [productId]='produdct.id' [prodcutName]='produdct.name'
-      [productPrice]='produdct.price'>
+    <app-products-item *ngFor="let produdct of produdctsList" [imgUrl]='produdct.imgUrl' [productId]='produdct.id'
+      [prodcutName]='produdct.name' [productPrice]='produdct.price'>
     </app-products-item>
 
   </div>

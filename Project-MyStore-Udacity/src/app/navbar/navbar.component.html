@@ -1,12 +1,16 @@
 <nav class="navbar container">
 
   <section class=" navbar_right">
-    <figure routerLink="" class="navbar-logo-container" ><img class="navbar_logo" src="./assets/LogoMoonMakers.png" alt="LogoMoonMakers"></figure>
+    <figure routerLink="" class="navbar-logo-container"><img class="navbar_logo" src="./assets/LogoMoonMakers.png"
+        alt="LogoMoonMakers"></figure>
     <div>
-      <p routerLink="" >Home</p>
-      <p routerLink="" >Shop</p>
-      <p routerLink="" >About Us</p>
-      <p routerLink="" >Contact Us</p>
+      <a routerLink="">Home</a>
+      <div class="a-container" [routerLink]="['']" fragment="shop">
+        <a href="#shop">Shop</a>
+      </div>
+      <div class="a-container" [routerLink]="['']" fragment="footer">
+        <a href="#footer">Contact Us</a>
+      </div>
     </div>
   </section>
   <section class=" navbar_left">

@@ -1,4 +1,4 @@
-<footer>
+<footer id="footer">
   <section>
     <figure>
       <img src="./assets/LogoMoonMakers.png" alt="">
@@ -7,9 +7,11 @@
   </section>
   <section>
     <h3>sections</h3>
-    <p>home</p>
-    <p>shop</p>
-    <p>shopping Cart</p>
+    <a routerLink="">Home</a>
+    <div class="a-container" [routerLink]="['']" fragment="shop">
+      <a href="#shop">Shop</a>
+    </div>
+    <a routerLink="cart">shopping Cart</a>
   </section>
   <section>
     <h3>Contact</h3>

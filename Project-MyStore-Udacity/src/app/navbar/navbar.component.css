@@ -28,7 +28,11 @@
   /* justify-content: space-evenly; */
 }
 
-p {
+a {
+  text-decoration: none;
+}
+p,
+a {
   font-size: 15px;
   color: #707070;
   margin-left: 40px;
@@ -41,6 +45,8 @@ p {
 .navbar-logo-container {
   width: 391px;
   height: 60px;
+  cursor: pointer;
+
   /* margin-left: 40px; */
 }
 
@@ -50,4 +56,8 @@ p {
 }
 .navbar_icon {
   width: 100%;
+}
+
+nav section div .a-container {
+  width: auto;
 }

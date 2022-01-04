@@ -20,12 +20,23 @@ img {
   object-fit: contain;
 }
 
-p {
+p,
+a {
   max-width: 200px;
   margin-bottom: 25px;
+  color: black;
 }
 
 h3 {
   margin-bottom: 30px;
   margin-top: 4vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.a-container {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
