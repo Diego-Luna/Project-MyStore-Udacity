@@ -1,0 +1,74 @@
+{
+  "Products": [
+    {
+      "id": 0,
+      "name": "10 conductive ink kits",
+      "price": 45,
+      "imgUrl": "./assets/ink.png",
+      "productQuantity": 10
+    },
+    {
+      "id": 1,
+      "name": "20 conductive ink kits",
+      "price": 85,
+      "imgUrl": "./assets/ink.png",
+      "productQuantity": 10
+    },
+    {
+      "id": 2,
+      "name": "30 conductive ink kits",
+      "price": 130,
+      "imgUrl": "./assets/ink.png",
+      "productQuantity": 10
+    },
+    {
+      "id": 3,
+      "name": "Maker computer",
+      "price": 80,
+      "imgUrl": "./assets/laptop.png",
+      "productQuantity": 10
+    },
+    {
+      "id": 4,
+      "name": "raspberry pi pico",
+      "price": 5,
+      "imgUrl": "./assets/pico.png",
+      "productQuantity": 10
+    },
+    {
+      "id": 5,
+      "name": "10 craspberry pi pico",
+      "price": 45,
+      "imgUrl": "./assets/pico.png",
+      "productQuantity": 10
+    },
+    {
+      "id": 6,
+      "name": "30 craspberry pi pico",
+      "price": 145,
+      "imgUrl": "./assets/pico.png",
+      "productQuantity": 10
+    },
+    {
+      "id": 7,
+      "name": "control game",
+      "price": 45,
+      "imgUrl": "./assets/game.png",
+      "productQuantity": 10
+    },
+    {
+      "id": 8,
+      "name": "maker camara",
+      "price": 500,
+      "imgUrl": "./assets/camara.png",
+      "productQuantity": 10
+    },
+    {
+      "id": 9,
+      "name": "art kits",
+      "price": 100,
+      "imgUrl": "./assets/art.png",
+      "productQuantity": 10
+    }
+  ]
+}
