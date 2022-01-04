@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsServiceService } from '../products-service.service';
 
+// interface Product {
+//   id: number,
+//   name: string,
+//   price: number,
+//   imgUrl: string,
+//   productQuantity: number
+// }
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,14 +18,20 @@ export class HomeComponent implements OnInit {
 
   produdctsList: any = []
 
-  // constructor() { }
-  constructor(private productsService: ProductsServiceService) { }
+  constructor(private productsService: ProductsServiceService) {
+  }
 
   ngOnInit(): void {
-    this.productsService.getProducts().subscribe(data => {
-      this.produdctsList = data;
-      console.log(this.produdctsList);
-    });
+
+    this.produdctsList = this.productsService.getProducts()
+
+    if (this.produdctsList.length < 2) {
+      this.productsService.getData().subscribe(data => {
+        this.produdctsList = data
+        this.produdctsList = this.produdctsList.products
+        this.productsService.receiveProducts(this.produdctsList);
+      });
+    }
   }
 
 }

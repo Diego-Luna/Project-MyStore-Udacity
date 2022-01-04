@@ -1,12 +1,12 @@
-<section>
-  <figure> <img src="./assets/laptop.png" alt="product img"> </figure>
-  <div class="container-info" >
+<section *ngIf="product">
+  <figure> <img src={{product.imgUrl}} alt={{product.name}}> </figure>
+  <div class="container-info">
     <h2>MoonMakers</h2>
-    <h3>Maker computer</h3>
+    <h3>{{product.name}}</h3>
     <p>Description</p>
     <p>Bla bla Bla bla Bla bla Bla bla Bla bla Bla bla Bla bla Bla</p>
-    <p><b>$800</b></p>
-    <div class="cart-secction" >
+    <p><b>${{product.price}}</b></p>
+    <div class="cart-secction">
       <form class="cart-secction-container" action="">
         <select name="product number">
           <option value="1">1</option>
