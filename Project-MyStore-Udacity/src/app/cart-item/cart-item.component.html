@@ -1,16 +1,16 @@
 <div class="cart-item">
-  <figure class="image-product-container"><img src="./assets/laptop.png" alt=""></figure>
+  <figure class="image-product-container"><img src={{product?.imgUrl}} alt={{product?.name}}></figure>
   <div class="product-info-container">
-    <p class="product-info-titile">Maker computer</p>
+    <p class="product-info-titile">{{product?.name}}</p>
     <p class="product-info-sub-titile">Moonmakers</p>
   </div>
   <div class="product-amount-container">
     <button>+</button>
-    <p class="product-amount-count">1</p>
+    <p class="product-amount-count">{{product?.productQuantity}}</p>
     <button>-</button>
   </div>
-  <p class="product-price">$ 800</p>
-  <button class="delete-button" >
-    <figure class="icon-remove-container"><img src="./assets/eliminar-50.png" alt=""></figure>
+  <p class="product-price">$ {{product?.price}}</p>
+  <button class="delete-button">
+    <figure class="icon-remove-container"><img src="./assets/eliminar-50.png" alt="icon delete"></figure>
   </button>
 </div>

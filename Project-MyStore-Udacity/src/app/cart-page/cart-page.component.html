@@ -4,13 +4,9 @@
     <h2>Shopping cart</h2>
 
     <div class="cart-item-container">
-      <app-cart-item></app-cart-item>
-      <app-cart-item></app-cart-item>
-      <app-cart-item></app-cart-item>
-      <app-cart-item></app-cart-item>
-      <app-cart-item></app-cart-item>
-      <app-cart-item></app-cart-item>
-      <app-cart-item></app-cart-item>
+
+      <app-cart-item *ngFor="let produdct of cartProducts" [product]='produdct'></app-cart-item>
+
     </div>
 
     <div class="info-container">
@@ -19,7 +15,7 @@
         <figure><img src="./assets/flecha-izquierda-larga-50.png" alt="home"></figure>
         <p>Home</p>
       </div>
-      <p class="total" > Total: $500 </p>
+      <p class="total"> Total: $500 </p>
 
     </div>
   </div>

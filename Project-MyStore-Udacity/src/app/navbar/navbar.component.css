@@ -61,3 +61,7 @@ a {
 nav section div .a-container {
   width: auto;
 }
+
+.pointer {
+  cursor: pointer;
+}
