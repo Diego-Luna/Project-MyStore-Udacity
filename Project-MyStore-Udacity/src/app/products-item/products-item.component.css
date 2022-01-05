@@ -2,6 +2,7 @@ div {
   width: 17vw;
   height: 35vh;
   margin-bottom: 10vh;
+  cursor: pointer;
 }
 
 figure {
