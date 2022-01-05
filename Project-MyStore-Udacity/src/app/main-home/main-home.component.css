@@ -1,11 +1,11 @@
 h1 {
-  font-size: 80px;
+  font-size: 5vw;
   color: black;
   font-weight: bold;
   white-space: nowrap;
 }
 h2 {
-  font-size: 55px;
+  font-size: 4vw;
   color: black;
   font-weight: normal;
 
@@ -13,11 +13,10 @@ h2 {
 }
 
 .container {
+  width: calc(100% - 120px);
+  margin: auto;
   margin-top: 36px;
   margin-bottom: 36px;
-  width: calc(100% - 120px);
-  margin-left: 60px;
-  margin-right: 60px;
   background-color: #d3d3d3;
   border-radius: 40px;
   display: flex;
@@ -51,7 +50,7 @@ h2 {
   background-color: white;
   display: flex;
   align-items: center;
-  width: 600px;
+  width: 90%;
   height: 65px;
   border-radius: 72px;
   margin-top: 100px;

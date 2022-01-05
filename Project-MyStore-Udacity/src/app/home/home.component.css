@@ -1,6 +1,7 @@
 .container-section {
   display: flex;
   width: 90%;
+  max-width: 1500px;
   margin: auto;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -13,7 +14,6 @@
   text-transform: capitalize;
   text-align: center;
   margin-top: 10vh;
-
 }
 .products-sub-title {
   font-size: 30px;
@@ -26,9 +26,15 @@
 .container-section-products {
   display: flex;
   width: 90%;
+  max-width: 1500px;
   margin: auto;
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin-top: 36px;
+}
 
+@media (max-width: 1200px) {
+  .container-evening {
+    justify-content: space-evenly;
+  }
 }

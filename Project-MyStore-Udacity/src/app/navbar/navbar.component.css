@@ -4,14 +4,17 @@
 }
 
 .container {
-  width: 100% - 120px;
+  width: 90%;
   padding: 0;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: #f2f2f2;
 }
 
 .navbar {
-  background-color: #f2f2f2;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
   display: flex;
   height: 100px;
   align-items: center;
@@ -64,4 +67,8 @@ nav section div .a-container {
 
 .pointer {
   cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+
 }
