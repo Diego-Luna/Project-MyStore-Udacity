@@ -50,7 +50,8 @@
   <div class="container-section-products" *ngIf="produdctsList">
 
     <app-products-item *ngFor="let produdct of produdctsList" [imgUrl]='produdct.imgUrl' [productId]='produdct.id'
-      [prodcutName]='produdct.name' [productPrice]='produdct.price'>
+      [prodcutName]='produdct.name' [productPrice]='produdct.price' [productCount]='produdct.productQuantity'
+      (liked)="addCart(produdct)">
     </app-products-item>
 
   </div>

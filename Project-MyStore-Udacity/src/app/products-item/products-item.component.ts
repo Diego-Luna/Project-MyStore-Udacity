@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-products-item',
@@ -11,10 +11,34 @@ export class ProductsItemComponent implements OnInit {
   @Input() prodcutName: string = "";
   @Input() productPrice: number = 0;
   @Input() productId: number = -1;
+  @Input() productCount: number = 0;
+
+  disableButton: boolean = false
+
+
+  @Output() liked = new EventEmitter();
+
+
 
   constructor() { }
 
   ngOnInit(): void {
+    if (this.productCount >= 1) {
+      this.disableButton = true;
+      console.log(" --> this.productCount >= 1 <-- ");
+
+    } else {
+      this.disableButton = false;
+    }
+  }
+
+  ngDoCheck() {
+    if (this.productCount >= 1) {
+      this.disableButton = true;
+      console.log(" --> this.productCount >= 1 <-- ");
+    } else {
+      this.disableButton = false;
+    }
   }
 
 }

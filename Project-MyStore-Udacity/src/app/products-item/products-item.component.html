@@ -1,7 +1,9 @@
-<div routerLink="/product/{{productId + 1}}">
-  <figure>
+<div >
+  <figure routerLink="/product/{{productId + 1}}">
     <img src={{imgUrl}} alt={{prodcutName}}>
   </figure>
   <p>{{prodcutName}}</p>
   <p><b>${{productPrice}}</b></p>
+  <button [disabled]="disableButton" class="icon-cart-container" (click)="liked.emit(productId)"> <img src="./assets/bolsa-de-compras-50.png" alt="">
+  </button>
 </div>
