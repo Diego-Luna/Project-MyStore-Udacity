@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductCartService } from '../product-cart.service';
+import { ProductsServiceService } from '../products-service.service';
+import { Router } from '@angular/router';
 
 interface Product {
   id: number,
@@ -24,7 +26,7 @@ export class CartPageComponent implements OnInit {
 
   buttonActivate: boolean = true;
 
-  constructor(private productCartService: ProductCartService) { }
+  constructor(private productCartService: ProductCartService, private productsService: ProductsServiceService, private router: Router) { }
 
   ngOnInit(): void {
     this.cartProducts = this.productCartService.getProductCart();
@@ -32,7 +34,8 @@ export class CartPageComponent implements OnInit {
 
   ngDoCheck(): void {
     this.totalPrice = this.productCartService.getTotalPrice()
-    if (this.fullName.length >= 10 && this.adress.length >= 10 && this.creditCarNumber) {
+
+    if (this.fullName.length >= 10 && this.adress.length >= 10 && this.creditCarNumber && this.cartProducts.length > 0) {
 
       if (this.creditCarNumber > 1111111111 && this.creditCarNumber < 9999999999) {
         this.buttonActivate = false;
@@ -45,7 +48,9 @@ export class CartPageComponent implements OnInit {
   }
 
   checkInformation(): void {
-    alert("Hola")
+    this.productCartService.clearProductCart();
+    this.productsService.productsReset();
+    this.router.navigate(['']);
   }
 
 }

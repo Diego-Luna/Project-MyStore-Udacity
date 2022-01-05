@@ -16,7 +16,6 @@ interface Product {
 
 export class ProductsServiceService {
 
-  cartList = []
   produdctsList: any = []
   data: any = []
 
@@ -46,6 +45,17 @@ export class ProductsServiceService {
     var indexProduct: number = this.produdctsList.findIndex((element: Product) => element.id === id)
     this.produdctsList[indexProduct].productQuantity = number;
     return this.produdctsList[indexProduct];
+  }
+
+  productsReset() {
+    var resetProducts: Product[] = this.produdctsList.map((product: Product) => {
+      product.productQuantity = 0;
+      return product
+    })
+
+    this.produdctsList = resetProducts
+
+    return this.produdctsList
   }
 
 }
