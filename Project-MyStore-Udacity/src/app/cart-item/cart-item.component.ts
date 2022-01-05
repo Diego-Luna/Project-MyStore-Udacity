@@ -29,4 +29,13 @@ export class CartItemComponent implements OnInit {
     console.log(status);
   }
 
+  moreCount(): void {
+    this.productCartService.moreProductQuantity(this.product.id)
+  }
+
+  lessCount(): void {
+    this.productCartService.lessProductQuantity(this.product.id)
+
+  }
+
 }

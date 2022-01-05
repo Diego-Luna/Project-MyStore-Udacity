@@ -38,4 +38,16 @@ export class ProductCartService {
     return this.productCart;
   }
 
+  moreProductQuantity(idProduct: number) {
+    var indexProduct: number = this.productCart.findIndex((element: Product) => element.id === idProduct)
+    this.productCart[indexProduct].productQuantity += 1;
+    return this.productCart[idProduct];
+  }
+
+  lessProductQuantity(idProduct: number) {
+    var indexProduct: number = this.productCart.findIndex((element: Product) => element.id === idProduct)
+    this.productCart[indexProduct].productQuantity -= 1;
+    return this.productCart[idProduct];
+  }
+
 }
