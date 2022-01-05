@@ -18,9 +18,13 @@ export class CartPageComponent implements OnInit {
   cartProducts: Product[] = []
   totalPrice: number = 0;
 
+  fullName: string = "";
+  adress: string = "";
+  creditCarNumber: number | undefined;
+
+  buttonActivate: boolean = true;
+
   constructor(private productCartService: ProductCartService) { }
-
-
 
   ngOnInit(): void {
     this.cartProducts = this.productCartService.getProductCart();
@@ -28,9 +32,20 @@ export class CartPageComponent implements OnInit {
 
   ngDoCheck(): void {
     this.totalPrice = this.productCartService.getTotalPrice()
-    console.log(" --> totalPrice ");
-    console.log(this.totalPrice);
+    if (this.fullName.length >= 10 && this.adress.length >= 10 && this.creditCarNumber) {
 
+      if (this.creditCarNumber > 1111111111 && this.creditCarNumber < 9999999999) {
+        this.buttonActivate = false;
+      } else {
+        this.buttonActivate = true;
+      }
+    } else {
+      this.buttonActivate = true;
+    }
+  }
+
+  checkInformation(): void {
+    alert("Hola")
   }
 
 }

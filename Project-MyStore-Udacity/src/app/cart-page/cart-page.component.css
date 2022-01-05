@@ -116,3 +116,13 @@ button:hover {
 .total-container p {
   font-size: 22px;
 }
+
+button:disabled {
+  background-color: #853032;
+  cursor: auto;
+}
+
+button:disabled:hover {
+  background-color: #853032;
+  border: none;
+}
