@@ -30,10 +30,12 @@ export class CartItemComponent implements OnInit {
   }
 
   ngDoCheck(): void {
-    if (this.product.productQuantity <= 9) {
-      this.disableMore = false;
-    }else{
-      this.disableMore = true;
+    if (this.product) {
+      if (this.product.productQuantity <= 9) {
+        this.disableMore = false;
+      }else{
+        this.disableMore = true;
+      }
     }
   }
 
