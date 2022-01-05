@@ -29,9 +29,18 @@ export class CartItemComponent implements OnInit {
     this.productCartService.removeProductCart(this.product.id);
   }
 
+  ngDoCheck(): void {
+    if (this.product.productQuantity <= 9) {
+      this.disableMore = false;
+    }else{
+      this.disableMore = true;
+    }
+  }
+
   moreCount(): void {
-    if (this.product.productQuantity < 9) {
+    if (this.product.productQuantity <= 9) {
       this.productCartService.moreProductQuantity(this.product.id)
+      this.disableMore = false;
     } else {
       this.disableMore = true;
     }
