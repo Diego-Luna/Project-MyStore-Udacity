@@ -22,9 +22,7 @@ export class ProductCartService {
   }
 
   getTotalPrice() {
-
     var price: number = 0;
-
     this.productCart.forEach((product: Product) =>
       price += product.price * product.productQuantity
     )

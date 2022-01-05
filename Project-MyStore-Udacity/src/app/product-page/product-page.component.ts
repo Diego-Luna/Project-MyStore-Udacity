@@ -20,12 +20,13 @@ interface Data {
 })
 export class ProductPageComponent implements OnInit {
 
-  product: any | Product;
+  product: Product | any = {};
 
   url: string = "";
-  newUrl: number = 1;
+  idNumber: number = 1;
 
   product_number: number = 1;
+  productCart: boolean = false;
 
   constructor(private productsService: ProductsServiceService, private productCartService: ProductCartService, private router: Router) {
   }
@@ -35,17 +36,23 @@ export class ProductPageComponent implements OnInit {
     this.url = `${this.router.parseUrl(this.router.url)}`;
 
     // /product/1
-    this.newUrl = parseInt(this.url.substr(9, this.url.length)) - 1
+    this.idNumber = parseInt(this.url.substr(9, this.url.length)) - 1
 
-    this.product = this.productsService.getProduct(this.newUrl)
+    this.product = this.productsService.getProduct(this.idNumber)
 
     if (typeof this.product === 'undefined') {
       this.productsService.getData().subscribe(data => {
 
         var newData: any = data;
         this.productsService.receiveProducts(newData.products);
-        this.product = this.productsService.getProduct(this.newUrl)
+        this.product = this.productsService.getProduct(this.idNumber)
+
+        if (this.product.productQuantity > 0) {
+          this.productCart = true;
+        }
       });
+    } else if (this.product.productQuantity > 0) {
+      this.productCart = true;
     }
   }
 
@@ -58,11 +65,11 @@ export class ProductPageComponent implements OnInit {
       imgUrl: this.product.imgUrl,
       productQuantity: typeof this.product_number === 'number' ? this.product_number : parseInt(this.product_number),
     }
-    var redy = this.productCartService.addToProductCart(productNew)
+    var carProduct = this.productCartService.addToProductCart(productNew);
 
-    console.log("-> redy");
-    console.log(redy);
+    var productChange = this.productsService.changeProductQuantity(productNew.id, productNew.productQuantity);
 
+    this.productCart = true;
 
   }
 

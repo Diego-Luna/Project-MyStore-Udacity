@@ -42,4 +42,10 @@ export class ProductsServiceService {
 
   }
 
+  changeProductQuantity(id: number, number: number) {
+    var indexProduct: number = this.produdctsList.findIndex((element: Product) => element.id === id)
+    this.produdctsList[indexProduct].productQuantity = number;
+    return this.produdctsList[indexProduct];
+  }
+
 }
