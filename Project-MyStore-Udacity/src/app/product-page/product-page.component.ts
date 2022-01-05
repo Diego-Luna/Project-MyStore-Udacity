@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductsServiceService } from '../products-service.service';
+import { ProductCartService } from '../product-cart.service';
 
 interface Product {
   id: number,
@@ -24,7 +25,9 @@ export class ProductPageComponent implements OnInit {
   url: string = "";
   newUrl: number = 1;
 
-  constructor(private productsService: ProductsServiceService, private router: Router) {
+  product_number: number = 1;
+
+  constructor(private productsService: ProductsServiceService, private productCartService: ProductCartService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -44,6 +47,23 @@ export class ProductPageComponent implements OnInit {
         this.product = this.productsService.getProduct(this.newUrl)
       });
     }
+  }
+
+  addToBookmarks(): void {
+
+    var productNew: Product = {
+      id: this.product.id,
+      name: this.product.name,
+      price: this.product.price,
+      imgUrl: this.product.imgUrl,
+      productQuantity: typeof this.product_number === 'number' ? this.product_number : parseInt(this.product_number),
+    }
+    var redy = this.productCartService.addToProductCart(productNew)
+
+    console.log("-> redy");
+    console.log(redy);
+
+
   }
 
 }
