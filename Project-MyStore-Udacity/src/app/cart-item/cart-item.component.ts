@@ -19,7 +19,6 @@ export class CartItemComponent implements OnInit {
   @Input() product: Product | any;
 
   disableMore: boolean = false;
-
   constructor(private productCartService: ProductCartService) { }
 
   ngOnInit(): void {

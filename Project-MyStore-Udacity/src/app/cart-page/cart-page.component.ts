@@ -16,11 +16,21 @@ interface Product {
 export class CartPageComponent implements OnInit {
 
   cartProducts: Product[] = []
+  totalPrice: number = 0;
 
   constructor(private productCartService: ProductCartService) { }
 
+
+
   ngOnInit(): void {
     this.cartProducts = this.productCartService.getProductCart();
+  }
+
+  ngDoCheck(): void {
+    this.totalPrice = this.productCartService.getTotalPrice()
+    console.log(" --> totalPrice ");
+    console.log(this.totalPrice);
+
   }
 
 }
