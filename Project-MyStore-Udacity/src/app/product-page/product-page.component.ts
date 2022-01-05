@@ -40,14 +40,7 @@ export class ProductPageComponent implements OnInit {
 
     if (valueId.length <= 2 && parseInt(valueId) && parseInt(valueId) > -1 && parseInt(valueId) <= 10) {
 
-      console.log("-> valueId");
-      console.log(valueId);
-
-
-
       this.idNumber = parseInt(valueId) - 1;
-      console.log("-> this.idNumber");
-      console.log(this.idNumber);
       this.product = this.productsService.getProduct(this.idNumber);
 
       if (typeof this.product === 'undefined') {
