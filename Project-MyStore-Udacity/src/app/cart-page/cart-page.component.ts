@@ -34,23 +34,21 @@ export class CartPageComponent implements OnInit {
 
   ngDoCheck(): void {
     this.totalPrice = this.productCartService.getTotalPrice()
-
-    if (this.fullName.length >= 10 && this.adress.length >= 10 && this.creditCarNumber && this.cartProducts.length > 0) {
-
-      if (this.creditCarNumber > 1111111111 && this.creditCarNumber < 9999999999) {
-        this.buttonActivate = false;
-      } else {
-        this.buttonActivate = true;
-      }
-    } else {
-      this.buttonActivate = true;
-    }
   }
 
   checkInformation(): void {
     this.productCartService.clearProductCart();
     this.productsService.productsReset();
     this.router.navigate(['payment']);
+  }
+
+  checkCreditCart(value: any): void {
+    if (this.cartProducts.length > 0 && this.fullName.length >= 10 && this.adress.length >= 10 && value >= 1000000000 && value <= 9999999999) {
+      this.buttonActivate = false;
+    } else {
+      this.buttonActivate = true;
+    }
+
   }
 
 }

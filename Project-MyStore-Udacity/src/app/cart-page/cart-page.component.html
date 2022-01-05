@@ -35,8 +35,11 @@
       </p>
       <p>
         <label>Credit Car Number</label><br>
+        <!-- <input type="number" name="creditCarNumber" required min="'1111111111" max="9999999999" maxlength="10"
+          [(ngModel)]="creditCarNumber"> -->
         <input type="number" name="creditCarNumber" required min="'1111111111" max="9999999999" maxlength="10"
-          [(ngModel)]="creditCarNumber">
+          [(ngModel)]="creditCarNumber" (ngModelChange)="checkCreditCart($event)" >
+
       </p>
       <button type="submit" [disabled]="buttonActivate">Payment</button>
     </form>
