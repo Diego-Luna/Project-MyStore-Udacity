@@ -35,24 +35,37 @@ export class ProductPageComponent implements OnInit {
 
     this.url = `${this.router.parseUrl(this.router.url)}`;
 
-    // /product/1
-    this.idNumber = parseInt(this.url.substr(9, this.url.length)) - 1
+    var valueId = this.url.substr(9, this.url.length);
 
-    this.product = this.productsService.getProduct(this.idNumber)
 
-    if (typeof this.product === 'undefined') {
-      this.productsService.getData().subscribe(data => {
+    if (valueId.length <= 2 && parseInt(valueId) && parseInt(valueId) > -1 && parseInt(valueId) <= 10) {
 
-        var newData: any = data;
-        this.productsService.receiveProducts(newData.products);
-        this.product = this.productsService.getProduct(this.idNumber)
+      console.log("-> valueId");
+      console.log(valueId);
 
-        if (this.product.productQuantity > 0) {
-          this.productCart = true;
-        }
-      });
-    } else if (this.product.productQuantity > 0) {
-      this.productCart = true;
+
+
+      this.idNumber = parseInt(valueId) - 1;
+      console.log("-> this.idNumber");
+      console.log(this.idNumber);
+      this.product = this.productsService.getProduct(this.idNumber);
+
+      if (typeof this.product === 'undefined') {
+        this.productsService.getData().subscribe(data => {
+
+          var newData: any = data;
+          this.productsService.receiveProducts(newData.products);
+          this.product = this.productsService.getProduct(this.idNumber)
+
+          if (this.product.productQuantity > 0) {
+            this.productCart = true;
+          }
+        });
+      } else if (this.product.productQuantity > 0) {
+        this.productCart = true;
+      }
+    } else {
+      this.router.navigate(['404']);
     }
   }
 

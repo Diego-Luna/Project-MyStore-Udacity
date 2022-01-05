@@ -36,7 +36,7 @@ export class ProductsServiceService {
   }
 
   getProduct(id: number) {
-    const found = this.produdctsList.find((element: Product) => element.id > id);
+    const found = this.produdctsList.find((element: Product) => element.id === id);
     return found;
 
   }
