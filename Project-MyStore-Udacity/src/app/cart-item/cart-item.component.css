@@ -42,7 +42,7 @@ button {
 }
 
 .product-info-titile {
-  font-size: 150%;
+  font-size: 125%;
   text-transform: capitalize;
   margin-bottom: 2%;
 }
@@ -86,9 +86,9 @@ button {
 }
 
 .product-price {
-  font-size: 30px;
+  font-size: 160%;
   font-weight: 400;
-  width: 12%;
+  width: 20%;
   text-align: center;
 }
 
@@ -103,6 +103,6 @@ button {
   margin-right: 20px;
 }
 
-button:disabled{
+button:disabled {
   color: gray;
 }
