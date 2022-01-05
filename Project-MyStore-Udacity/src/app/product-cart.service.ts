@@ -21,6 +21,10 @@ export class ProductCartService {
     return this.productCart;
   }
 
+  getProductCartNumber(){
+    return this.productCart.length;
+  }
+
   getTotalPrice() {
     var price: number = 0;
     this.productCart.forEach((product: Product) =>

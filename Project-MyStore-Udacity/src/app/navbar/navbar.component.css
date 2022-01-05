@@ -70,5 +70,30 @@ nav section div .a-container {
 }
 
 @media (max-width: 1050px) {
+}
 
+.number-products {
+  position: static;
+}
+
+.cart-shopping-container {
+  display: flex;
+}
+
+.number-products {
+  position: relative;
+}
+
+.number {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 55%;
+  left: -17px;
+  margin: 0;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  color: white;
 }
