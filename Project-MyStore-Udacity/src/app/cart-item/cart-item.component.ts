@@ -18,6 +18,8 @@ export class CartItemComponent implements OnInit {
 
   @Input() product: Product | any;
 
+  disableMore: boolean = false;
+
   constructor(private productCartService: ProductCartService) { }
 
   ngOnInit(): void {
@@ -30,11 +32,19 @@ export class CartItemComponent implements OnInit {
   }
 
   moreCount(): void {
-    this.productCartService.moreProductQuantity(this.product.id)
+    if (this.product.productQuantity < 9) {
+      this.productCartService.moreProductQuantity(this.product.id)
+    } else {
+      this.disableMore = true;
+    }
   }
 
   lessCount(): void {
-    this.productCartService.lessProductQuantity(this.product.id)
+    if (this.product.productQuantity > 1) {
+      this.productCartService.lessProductQuantity(this.product.id)
+    } else {
+      this.productCartService.removeProductCart(this.product.id)
+    }
 
   }
 
