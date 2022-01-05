@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { ProductCartService } from '../product-cart.service';
 interface Product {
   id: number,
   name: string,
@@ -16,11 +16,17 @@ interface Product {
 export class CartItemComponent implements OnInit {
 
 
-  @Input() product: Product | undefined;
+  @Input() product: Product | any;
 
-  constructor() { }
+  constructor(private productCartService: ProductCartService) { }
 
   ngOnInit(): void {
+  }
+
+  removeProduct(): void {
+    var status = this.productCartService.removeProductCart(this.product.id);
+    console.log("-> status");
+    console.log(status);
   }
 
 }

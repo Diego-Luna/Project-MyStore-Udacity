@@ -10,7 +10,7 @@
     <button>-</button>
   </div>
   <p class="product-price">$ {{product?.price}}</p>
-  <button class="delete-button">
+  <button (click)="removeProduct()" class="delete-button">
     <figure class="icon-remove-container"><img src="./assets/eliminar-50.png" alt="icon delete"></figure>
   </button>
 </div>
