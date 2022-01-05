@@ -19,6 +19,8 @@ import { HomeComponent } from './home/home.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { CartItemComponent } from './cart-item/cart-item.component';
+import { PaymentFinishedComponent } from './payment-finished/payment-finished.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { CartItemComponent } from './cart-item/cart-item.component';
     HomeComponent,
     ProductPageComponent,
     CartPageComponent,
-    CartItemComponent
+    CartItemComponent,
+    PaymentFinishedComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

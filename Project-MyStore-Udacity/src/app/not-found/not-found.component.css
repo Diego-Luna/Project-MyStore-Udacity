@@ -1,0 +1,25 @@
+section {
+  height: 80vh;
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div {
+  text-align: center;
+}
+
+h2 {
+  font-size: 12em;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: #ed3836;
+}
+
+h3 {
+  margin-top: 5%;
+  font-size: 2em;
+  font-weight: 400;
+  text-transform: capitalize;
+}

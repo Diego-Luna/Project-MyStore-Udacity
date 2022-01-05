@@ -50,7 +50,7 @@ export class CartPageComponent implements OnInit {
   checkInformation(): void {
     this.productCartService.clearProductCart();
     this.productsService.productsReset();
-    this.router.navigate(['']);
+    this.router.navigate(['payment']);
   }
 
 }
