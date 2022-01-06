@@ -25,7 +25,6 @@ export class ProductsItemComponent implements OnInit {
   ngOnInit(): void {
     if (this.productCount >= 1) {
       this.disableButton = true;
-      console.log(" --> this.productCount >= 1 <-- ");
 
     } else {
       this.disableButton = false;
@@ -35,7 +34,6 @@ export class ProductsItemComponent implements OnInit {
   ngDoCheck() {
     if (this.productCount >= 1) {
       this.disableButton = true;
-      console.log(" --> this.productCount >= 1 <-- ");
     } else {
       this.disableButton = false;
     }

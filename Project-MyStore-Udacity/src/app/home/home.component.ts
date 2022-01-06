@@ -50,8 +50,6 @@ export class HomeComponent implements OnInit {
     this.productsService.changeProductQuantity(productNew.id, 1);
     this.productCartService.addToProductCart(productNew);
     this.produdctsList = this.productsService.getProducts()
-    console.log("--> this.produdctsList");
-    console.log(this.produdctsList);
 
 
   }

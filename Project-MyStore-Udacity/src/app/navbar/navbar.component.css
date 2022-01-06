@@ -28,7 +28,6 @@
 }
 .navbar_right div {
   width: 100%;
-  /* justify-content: space-evenly; */
 }
 
 a {
@@ -49,8 +48,6 @@ a {
   width: 391px;
   height: 60px;
   cursor: pointer;
-
-  /* margin-left: 40px; */
 }
 
 .navbar-icon-container {
@@ -67,9 +64,6 @@ nav section div .a-container {
 
 .pointer {
   cursor: pointer;
-}
-
-@media (max-width: 1050px) {
 }
 
 .number-products {
@@ -96,4 +90,10 @@ nav section div .a-container {
   text-align: center;
   line-height: 30px;
   color: white;
+}
+
+.manu-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 12;
 }
