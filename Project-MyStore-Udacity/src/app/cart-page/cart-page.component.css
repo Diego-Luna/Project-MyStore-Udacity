@@ -126,3 +126,15 @@ button:disabled:hover {
   background-color: #853032;
   border: none;
 }
+
+i {
+  color: #c8464a;
+  margin-left: 10px;
+}
+
+.no_visible {
+  display: none;
+}
+.visible {
+  display: inline;
+}

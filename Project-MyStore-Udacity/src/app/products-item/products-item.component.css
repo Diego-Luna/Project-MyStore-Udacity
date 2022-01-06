@@ -45,13 +45,16 @@ b {
   bottom: 57%;
   left: 73%;
   z-index: 10;
+  cursor: pointer;
 }
 
 .icon-cart-container:hover {
   border: 1px solid black;
   border-radius: 10px;
+  cursor: auto;
 }
 
-button:disabled,button:disabled:hover{
+button:disabled,
+button:disabled:hover {
   opacity: 0;
 }

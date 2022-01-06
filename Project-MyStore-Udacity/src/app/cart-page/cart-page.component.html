@@ -25,20 +25,26 @@
 
     <form (ngSubmit)="checkInformation()">
       <p>
-        <label>Full Name</label><br>
-        <input type="text" name="fullName" required minlength="10" appForbiddenName="username" [(ngModel)]="fullName"
+        <label>Full Name</label><i [ngClass]="fullName.length <= 9 ? 'visible' : 'no_visible'">Minimum 10 letters</i> <i
+          [ngClass]="onlyLetters === true ? 'visible' : 'no_visible'">only letters</i>
+        <input type="text" name="fullName" pattern="[A-Za-z0-9]{1,15}" required minlength="10" appForbiddenName="username" [(ngModel)]="fullName"
           placeholder="Minimum 10 letters">
       </p>
       <p>
-        <label>Adress</label><br>
+        <label>Adress</label><i [ngClass]="adress.length <= 9 ? 'visible' : 'no_visible'">Minimum 10 letters</i>
         <input type="text" name="adress" required minlength="10" [(ngModel)]="adress" placeholder="Minimum 10 letters">
       </p>
       <p>
         <label>Credit Car Number</label><br>
+
         <!-- <input type="number" name="creditCarNumber" required min="'1111111111" max="9999999999" maxlength="10"
-          [(ngModel)]="creditCarNumber"> -->
-        <input type="number" name="creditCarNumber" required min="'1111111111" max="9999999999" maxlength="10"
-          [(ngModel)]="creditCarNumber" (ngModelChange)="checkCreditCart($event)" >
+          [(ngModel)]="creditCarNumber" (ngModelChange)="checkCreditCart($event)" > -->
+
+        <input type="number" maxLength="10" name="creditCarNumber" required [(ngModel)]="creditCarNumber"
+          (ngModelChange)="checkCreditCart($event)" placeholder="You need 10 numbers"
+          oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
+
+        <i [ngClass]="inputCreditCarNumber === false  ? 'visible' : 'no_visible'">You need 10 numbers</i>
 
       </p>
       <button type="submit" [disabled]="buttonActivate">Payment</button>
