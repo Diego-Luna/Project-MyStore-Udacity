@@ -20,7 +20,14 @@
           <option value="9">9</option>
           <option value="10">10</option>
         </select>
-        <button [disabled]="productCart" type="submit">Add to car</button>
+        <button [disabled]="productCart" type="submit">
+          <p *ngIf="productCart === false">
+            Add to car
+          </p>
+          <p *ngIf="productCart === true">
+            In the cart
+          </p>
+        </button>
       </form>
     </div>
   </div>

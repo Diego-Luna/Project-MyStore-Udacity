@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductCartService } from '../product-cart.service';
+import { ProductsServiceService } from '../products-service.service';
 interface Product {
   id: number,
   name: string,
@@ -19,7 +20,7 @@ export class CartItemComponent implements OnInit {
   @Input() product: Product | any;
 
   disableMore: boolean = false;
-  constructor(private productCartService: ProductCartService) { }
+  constructor(private productCartService: ProductCartService, private productsServiceService: ProductsServiceService) { }
 
   ngOnInit(): void {
   }
@@ -27,13 +28,14 @@ export class CartItemComponent implements OnInit {
   removeProduct(): void {
     // var status = this.productCartService.removeProductCart(this.product.id);
     this.productCartService.removeProductCart(this.product.id);
+    this.productsServiceService.changeProductQuantity(this.product.id, 0);
   }
 
   ngDoCheck(): void {
     if (this.product) {
       if (this.product.productQuantity <= 9) {
         this.disableMore = false;
-      }else{
+      } else {
         this.disableMore = true;
       }
     }

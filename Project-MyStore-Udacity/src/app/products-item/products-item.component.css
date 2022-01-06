@@ -51,10 +51,21 @@ b {
 .icon-cart-container:hover {
   border: 1px solid black;
   border-radius: 10px;
-  cursor: auto;
 }
 
 button:disabled,
 button:disabled:hover {
   opacity: 0;
+}
+
+.inTheCart {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
 }
