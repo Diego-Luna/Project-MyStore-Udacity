@@ -26,7 +26,7 @@ export class CartItemComponent implements OnInit {
   }
 
   removeProduct(): void {
-    // var status = this.productCartService.removeProductCart(this.product.id);
+    alert(`Producto eliminado : ${this.product.name}`)
     this.productCartService.removeProductCart(this.product.id);
     this.productsServiceService.changeProductQuantity(this.product.id, 0);
   }

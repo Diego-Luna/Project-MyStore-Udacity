@@ -37,9 +37,6 @@
       <p>
         <label>Credit Car Number</label><br>
 
-        <!-- <input type="number" name="creditCarNumber" required min="'1111111111" max="9999999999" maxlength="10"
-          [(ngModel)]="creditCarNumber" (ngModelChange)="checkCreditCart($event)" > -->
-
         <input type="number" maxLength="10" name="creditCarNumber" required [(ngModel)]="creditCarNumber"
           (ngModelChange)="checkCreditCart($event)" placeholder="You need 10 numbers"
           oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
